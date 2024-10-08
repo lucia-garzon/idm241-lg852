@@ -12,38 +12,82 @@
             <h1>Alpha Description</h1>
             <p>Link to: <a href="https://luciagarzon.vercel.app/" class="link">Original Interface</a></p>
 
-        <h2>TRIGGER</h2>
-        <h3>"View case study" Button</h3>
+        <h2>Trigger</h2>
         <ul>
             <li>Hover ON</li>
             <ul>
-                <li>.1 second delay</li>
+                <li>0.1 second delay</li>
+                <li>Transition lasting 0.3s</li>
             </ul>
             <li>Hover OFF</li>
+            <ul>
+                <li>0.1 second delay</li>
+                <li>Transition lasting 0.3s</li>
+
+            </ul>
             <li>Click</li>
         </ul>
     
-        <h2>RULES</h2>
-        <h3>"View case study" Button - Hover ON</h3>
+        <h2>Rules</h2>
+        <h3>Hover ON</h3>
         <ul>
-            <li>Hover ON - Cursor changes to finger</li>
-            <li>Hover ON - Button text changes to bolded font</li>
-            <li>Hover ON - Button moves up 5 pixels</li>
+            <li>Cursor changes to finger immediately</li>
+            <li>Button text changes to bold</li>
+            <li>Button moves up by 5 pixels</li>
+            <li>The hover animation happens smoothly with a 0.3-second transition (using transition: all .3s ease .1s;), starting after a 0.1-second delay</li>
+
     
         </ul>
     
-        <h3>View case study" Button - Hover OFF</h3>
+        <h3>Hover OFF</h3>
         <ul>
-            <li>Hover OFF - Cursor changes back to pointer</li>
-            <li>Hover OFF - Button text changes back to unbolded font</li>
-            <li>Hover ON - Button moves down 5 pixels to original location</li>
+            <li>Cursor changes back to pointer immediately</li>
+            <li>Button text goes back to its original font weight</li>
+            <li>Button back down to original position</li>
+            <li>Same 0.3-second transition with the 0.1-second delay is applied</li>
+        </ul>
+
+        <h3>Click</h3>
+        <ul>
+            <li>The pointer reverts back to a cursor</li>
+            <li>The current page disappears, leading the user to the case study page</li>
+        </ul>
+    
+
+
+
+
+
+        <h2>Feedback</h2>
+        <h3>Hover ON</h3>
+        <ul>
+            <li>Cursor changes to finger immediately</li>
+            <li>Button text changes to bold</li>
+            <li>Button moves up by 5 pixels</li>
+            <li>The hover animation happens smoothly with a 0.3-second transition (using transition: all .3s ease .1s;), starting after a 0.1-second delay</li>
+
     
         </ul>
     
+        <h3>Hover OFF</h3>
+        <ul>
+            <li>Cursor changes back to pointer immediately</li>
+            <li>Button text goes back to its original font weight</li>
+            <li>Button back down to original position</li>
+            <li>Same 0.3-second transition with the 0.1-second delay is applied</li>
+        </ul>
+
+        <h3>Click</h3>
+        <ul>
+            <li>The pointer reverts back to a cursor</li>
+            <li>The current page disappears, leading the user to the case study page</li>
+        </ul>
     
-        <h2>FEEDBACK</h2>
-    
-        <h2>LOOPS &amp; MODES</h2>
+        <h2>Loops &amp; Modes</h2>
+        <ul>
+            <li>No loops</li>
+            <li>Mode: When the user clicks on the button, a new screen appears as the user is navigated to the case study page</li>
+        </ul>
         <div class="video">
             <video controls autoplay src="images/idm241-recording.mp4"></video>
     </div>
