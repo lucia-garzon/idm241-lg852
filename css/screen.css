@@ -279,3 +279,11 @@ video {
         height: auto;
     }
 }
+
+.button-card2:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    background-color: var(--project-2-dark);
+    transform: translateY(-5px);
+}
