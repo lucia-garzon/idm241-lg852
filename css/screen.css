@@ -1,3 +1,9 @@
+.hidden {
+    opacity: 0;
+}
+
+
+
 @font-face {
     font-family: "montserrat";
     src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
@@ -71,7 +77,14 @@ main {
     background-color: var(--main-background);
     
 }
-
+.wrapper {
+    grid-area: content;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 p {
     color: var(--primary-text);
     font-family: var(--font-primary);
@@ -92,8 +105,8 @@ h1, h2, h3, h4 {
     max-width: 100%;
     font-size: calc(2vh + 1vw); 
     line-height: calc(3vh + 1vw);
-    margin-top: 5vh;
-    margin-bottom: 0.3vh; 
+    /* margin-top: 5vh;
+    margin-bottom: 0.3vh;  */
 }
 
 h3 {
@@ -253,6 +266,72 @@ video {
     margin-bottom: 8vh;
     margin-top: 2vh;
 }
+/* DELETE LATER    DELETE LATER    DELETE LATER    DELETE LATER    DELETE LATER     DELETE LATER     DELETE LATER     DELETE LATER    DELETE LATER
+@media screen and (min-width: 0px) and (max-width: 767px) { 
+    .projects {
+        margin-bottom: -143vh;
+    }
+}
+@media screen and (min-width: 415px) { 
+    .projects {
+        margin-bottom: -154vh;
+    }
+}
+@media screen and (min-width: 568px) and (max-width: 708px){ 
+    .projects {
+        margin-bottom: -175vh;
+    }
+}
+@media screen and (min-width: 740px) and (max-width: 763px){ 
+    .projects {
+        margin-bottom: -207vh;
+    }
+}
+@media screen and (min-width: 767px) { 
+    .projects {
+        margin-bottom: -208vh;
+    }
+}
+@media screen and (min-width: 769px) { 
+    .projects {
+        margin-bottom: -69vh;
+    }
+} */
+
+@media screen and (max-width: 767px) { 
+    .projects {
+        margin-bottom: calc(-143vh + (154 - 143) * ((100vw - 0px) / (415 - 0)));
+    }
+}
+
+@media screen and (min-width: 415px) and (max-width: 568px) { 
+    .projects {
+        margin-bottom: calc(-154vh + (175 - 154) * ((100vw - 415px) / (568 - 415)));
+    }
+}
+
+@media screen and (min-width: 568px) and (max-width: 740px) { 
+    .projects {
+        margin-bottom: calc(-175vh + (207 - 175) * ((100vw - 568px) / (740 - 568)));
+    }
+}
+
+@media screen and (min-width: 740px) and (max-width: 769px) { 
+    .projects {
+        margin-bottom: calc(-207vh + (208 - 207) * ((100vw - 740px) / (769 - 740)));
+    }
+}
+
+@media screen and (min-width: 769px) { 
+    .projects {
+        margin-bottom: -69vh;
+    }
+}
+
+
+
+
+
 @media screen and (min-width: 768px) { 
     .projects {
         display: grid;
