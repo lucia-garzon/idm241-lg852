@@ -112,6 +112,10 @@ h3 {
     margin-top: 2vh;
 
 }
+/* alpha build    alpha build    alpha build    alpha build    alpha build */
+.white-text {
+    color: var(--secondary-text);
+}
 .alpha-build {
     margin-bottom: 5vh;
 }
@@ -120,6 +124,30 @@ h3 {
     margin-bottom: 7vh;
     line-height: 35px;
 }
+/* Grid Layout */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Box Styling */
+.detail-box {
+    background-color: #a3e9e3;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+/* Responsive Behavior */
+@media (max-width: 600px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* alpha build  end   alpha build   end  alpha build   end  alpha build  end  alpha build  end*/
 .video {
     display: flex;
     justify-content: center; 
