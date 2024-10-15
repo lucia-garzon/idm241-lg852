@@ -398,26 +398,26 @@ video {
     border: 3px solid var(--project-1-dark); 
     background-color: var(--project-1-light);
 }
-.card-1:hover {
+/* .card-1:hover {
     box-shadow: 3px 3px var(--project-1-dark);
     transform: translate(-1px, -1px);
-}
+} */
 .card-2 {
     border: 3px solid var(--project-2-dark); 
     background-color: var(--project-2-light)
 }
-.card-2:hover {
+/* .card-2:hover {
     box-shadow: 3px 3px var(--project-2-dark);
     transform: translate(-1px, -1px);
-}
+} */
 .card-3 {
     border: 3px solid var(--project-3-dark); 
     background-color: var(--project-3-light)
 }
-.card-3:hover {
+/* .card-3:hover {
     box-shadow: 3px 3px var(--project-3-dark);
     transform: translate(-1px, -1px);
-}
+} */
 .card-4 {
     border: 3px solid var(--project-4-dark); 
     background-color: var(--project-4-light)
