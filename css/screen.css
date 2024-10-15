@@ -114,6 +114,9 @@ h3 {
 
 }
 
+.alpha-title {
+    margin-bottom: 2vh;
+}
 .video {
     display: flex;
     justify-content: center; 
