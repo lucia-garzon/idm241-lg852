@@ -3,7 +3,6 @@
 }
 
 
-
 @font-face {
     font-family: "montserrat";
     src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
@@ -113,12 +112,11 @@ h3 {
     margin-top: 2vh;
 
 }
-
 .alpha-build {
     margin-bottom: 5vh;
 }
 .alpha-title {
-    margin-top: 5vh;
+    margin-top: 7vh;
     margin-bottom: 7vh;
     line-height: 35px;
 }
