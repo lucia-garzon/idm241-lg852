@@ -115,8 +115,9 @@ h3 {
 }
 
 .alpha-title {
-    margin-top: 2vh;
+    margin-top: 5vh;
     margin-bottom: 7vh;
+    line-height: 35px;
 }
 .video {
     display: flex;
