@@ -114,6 +114,9 @@ h3 {
 
 }
 
+.alpha-build {
+    margin-bottom: 5vh;
+}
 .alpha-title {
     margin-top: 5vh;
     margin-bottom: 7vh;
@@ -145,6 +148,8 @@ video {
     width: 100%;
     align-items: center; */
 }
+
+
 
 
 /* Mobile styles */
