@@ -436,7 +436,6 @@ video {
 }
 
 
-
 .card-title {
     top: 17px;
     position: relative;
@@ -558,3 +557,27 @@ video {
     transform: translateY(-5px);
 }
 
+
+/*  New Redesign Classes */
+
+/*  Drop Shadow Animation */
+.hvr-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+}
+.hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+.card1 {
+    background-color: var(--project-1-light);
+}
+.card2 {
+    background-color: var(--project-2-light)
+}
