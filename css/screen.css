@@ -560,6 +560,50 @@ video {
 
 /*  New Redesign Classes */
 
+.cardcontainer {
+    align-items: flex-start;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-self: stretch;
+    transition: all .3s ease-in;;
+}
+.cardtitle {
+    top: 1rem;
+    position: relative;
+}
+.card1 {
+    background-color: var(--project-1-light);
+    /* box-shadow: 2px 4px 12px #00000014;; */
+}
+.card2 {
+    background-color: var(--project-2-light)
+}
+.cardtext {
+    margin: .5vh;
+    max-width: 30ch;
+}
+.card-info {
+    display: flex;
+    flex-flow: column wrap;
+    align-self: flex-start;
+    text-align: left;  
+    width: 100%;
+    padding: 0 1rem 0 2rem;
+}
+.card-icons-right {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .75rem;
+    height: 4vh;
+    inset-inline-end: 15px;
+    position: absolute;
+    top: 28px;
+    height: 39px;
+}
+
+
 /*  Drop Shadow Animation */
 .hvr-shadow {
     vertical-align: middle;
@@ -574,9 +618,15 @@ video {
 .hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
-.card1 {
-    background-color: var(--project-1-light);
+.tool-logo {
+    opacity: 0.8; /* Initial opacity for subtle effect */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth easing */
+    transform: scale(1); /* Set initial state */
 }
-.card2 {
-    background-color: var(--project-2-light)
+.tool-logo:hover{
+    transform: scale(1.12) rotate(2deg); /* Adds slight rotation for depth */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    opacity: 1; /* Full opacity */
+    filter: brightness(1.1); /* Subtle brightness for a "pop" */
+    cursor: pointer;
 }
