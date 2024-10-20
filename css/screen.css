@@ -377,13 +377,19 @@ video {
 
 
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 732px) { 
     .projects {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    
 }
+
+
+
+
+
 @media screen and (min-width: 1130px) and (max-width: 1220px) {
     .projects {
         display: grid;
@@ -409,7 +415,6 @@ video {
         height:auto;
     }
 }
-
 
 
 
@@ -476,6 +481,7 @@ video {
     padding: 0 1.5vh 0 1.5vh;
     max-width: 30ch;
 }
+
 .card-icons {
     display: flex;
     flex-flow: row nowrap;
@@ -568,6 +574,7 @@ video {
     text-align: center;
     align-self: stretch;
     transition: all .3s ease-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .cardtitle {
     top: 1rem;
@@ -584,6 +591,12 @@ video {
     margin: .5vh;
     max-width: 30ch;
 }
+@media screen and (min-width: 515px) and (max-width: 732px) { 
+    .cardtext {
+        min-width: 39ch;
+    }
+    
+}
 .card-info {
     display: flex;
     flex-flow: column wrap;
@@ -591,6 +604,14 @@ video {
     text-align: left;  
     width: 100%;
     padding: 0 1rem 0 2rem;
+}
+.card-left { 
+    display: flex;
+    flex-flow: column wrap;
+    align-self: flex-start;
+    text-align: left;  
+    width: 33ch;
+    
 }
 .card-icons-right {
     display: flex;
@@ -605,7 +626,7 @@ video {
 
 
 /*  Drop Shadow Animation */
-.hvr-shadow {
+/* .hvr-shadow {
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
@@ -617,7 +638,7 @@ video {
 }
 .hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-}
+} */
 .tool-logo {
     display: inline-block;
     vertical-align: middle;
@@ -639,7 +660,7 @@ video {
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
