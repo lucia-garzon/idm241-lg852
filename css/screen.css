@@ -115,10 +115,10 @@ h3 {
 .white-text {
     color: var(--secondary-text);
 }
-.alpha-build {
+.alpha-build, .beta {
     margin-bottom: 5vh;
 }
-.alpha-title {
+.alpha-title, .beta-title {
     margin-top: 7vh;
     margin-bottom: 7vh;
     line-height: 35px;
