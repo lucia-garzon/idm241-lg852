@@ -93,10 +93,11 @@ p {
     color: var(--primary-text);
     font-family: var(--font-primary);
     line-height: 28px;
-    margin-top: 1.2rem; 
     letter-spacing: .1vh;;
 }
-
+.bolded-header+ul {
+    margin-top: -1vh;
+}
 ul li {
     color: var(--primary-text);
     font-family: var(--font-primary);
@@ -119,12 +120,6 @@ h3 {
 
 }
 
-h4+ul {
-    margin-top: -2vh; 
-}
-h4 {
-    margin-top: 1.2rem;
-}
 /* alpha build    alpha build    alpha build    alpha build    alpha build */
 .white-text {
     color: var(--secondary-text);
