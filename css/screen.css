@@ -88,8 +88,15 @@ p {
     line-height: 28px;
     /* margin: 3vh auto; */
     margin-bottom: 0.75rem;
-    margin-top: 2rem;
 }
+.bolded-header {
+    color: var(--primary-text);
+    font-family: var(--font-primary);
+    line-height: 28px;
+    margin-top: 1.2rem; 
+    letter-spacing: .1vh;;
+}
+
 ul li {
     color: var(--primary-text);
     font-family: var(--font-primary);
@@ -110,6 +117,13 @@ h3 {
     margin-top: 2vh;
     margin-bottom: -1vh;
 
+}
+
+h4+ul {
+    margin-top: -2vh; 
+}
+h4 {
+    margin-top: 1.2rem;
 }
 /* alpha build    alpha build    alpha build    alpha build    alpha build */
 .white-text {
@@ -671,3 +685,4 @@ video {
     -webkit-transform: scale(1.01);
     transform: scale(1.01);
 }
+
