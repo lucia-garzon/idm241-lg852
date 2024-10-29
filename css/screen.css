@@ -322,36 +322,8 @@ video {
     margin-top: 2vh;
 }
 /* DELETE LATER    DELETE LATER    DELETE LATER    DELETE LATER    DELETE LATER     DELETE LATER     DELETE LATER     DELETE LATER    DELETE LATER
-@media screen and (min-width: 0px) and (max-width: 767px) { 
-    .projects {
-        margin-bottom: -143vh;
-    }
-}
-@media screen and (min-width: 415px) { 
-    .projects {
-        margin-bottom: -154vh;
-    }
-}
-@media screen and (min-width: 568px) and (max-width: 708px){ 
-    .projects {
-        margin-bottom: -175vh;
-    }
-}
-@media screen and (min-width: 740px) and (max-width: 763px){ 
-    .projects {
-        margin-bottom: -207vh;
-    }
-}
-@media screen and (min-width: 767px) { 
-    .projects {
-        margin-bottom: -208vh;
-    }
-}
-@media screen and (min-width: 769px) { 
-    .projects {
-        margin-bottom: -69vh;
-    }
-} */
+
+*/
 
 @media screen and (max-width: 767px) { 
     .projects {
@@ -514,7 +486,6 @@ video {
     margin-top: auto; 
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     width: 100%;
-    
 }
 
 .button-card {
