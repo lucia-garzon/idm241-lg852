@@ -127,9 +127,14 @@ h3 {
 .alpha-build, .beta {
     margin-bottom: 5vh;
 }
-.alpha-title, .beta-title {
+.alpha-title {
     margin-top: 7vh;
     margin-bottom: 7vh;
+    line-height: 35px;
+}
+.beta-title {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     line-height: 35px;
 }
 /* Grid Layout */
