@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Build</title>
+    <title>Beta Build</title>
     <link rel="stylesheet" href="css/screen.css">
 
 </head>
 <body>
     <main class="wrapper">
         <section class="alpha-build">
-            <h1 class="alpha-title">Alpha Build - Lucia Garzon Portfolio</h1>
+            <h1 class="alpha-title">Beta Build - Lucia Garzon Portfolio</h1>
             <!-- <h2>Lucia Garzon Portfolio</h2> -->
             <!-- <p>Link to: <a href="https://luciagarzon.vercel.app/" class="link">Original Interface</a></p> -->
 
         <section class="projects">
-            <div class="cardcontainer card1 hvr-shadow hvr-grow">
+            <div class="cardcontainer-new card1 cardcontainer-hover">
                 <div class="card-info">
                     <div class="card-icons-right">
                         <img class="tool-logo" alt="Figma icon" src="images/figma_icon.svg">
@@ -37,7 +37,7 @@
             </div>
             
 
-            <div class="cardcontainer card2 hvr-shadow hvr-grow">
+            <div class="cardcontainer-new card2 cardcontainer-hover">
                 <div class="card-info">
                     <div class="card-icons-right">
                         <img class="tool-logo" alt="Figma icon" src="images/figma_icon.svg">
@@ -55,7 +55,7 @@
                 <img class="card-image-1" alt="Phillyreach snapshot" src="graphics/index-phillyreach.png">
             </div>
 
-            <div class="cardcontainer card-3 hidden">
+            <div class="cardcontainer-new card-3 cardcontainer-hover hidden">
                 <h2 class="card-title  proj3-title">La Michoacana</h2>
                 <p class="card-text">Revamping La Michoacana's website and IA to <b>elevate user experience</b>.</p>
 
@@ -73,7 +73,7 @@
                 <img class="card-image-1" alt="Michoacana snapshot" src="graphics/index-michoacana.png">
             </div>
 
-            <div class="card-container card-4 hidden">
+            <div class="card-container-new card-4 cardcontainer-hover hidden">
                 <h2 class="card-title proj4-title">Inkling</h2>
                 <p class="card-text">Inkling allows users to reflect on their day in an app design enhanced by <b>thoughtful microinteractions</b>.</p>
                 
@@ -90,8 +90,13 @@
 
         <section class="details-grid">
             <div class="detail-box">
-                <h2>Triggers</h2>
-            <h3>"View case study" + "Coming soon" Button</h3>
+            <h2>Triggers</h2>
+            <h3>Overall Card</h3>
+            <ul>
+                <li>Hover ON</li>
+                <li>Hover OFF</li>
+            </ul>
+            <h3>"View case study" Button</h3>
             <ul>
                 <li>Hover ON</li>
                 <ul>
@@ -103,59 +108,130 @@
                 </ul>
                 <li>Click</li>
             </ul>
+
+            <h3>Logo Icon</h3>
+            <ul>
+                <li>Hover ON</li>
+                <li>Hover OFF</li>
+            </ul>
+
             </div>
             <div class="detail-box">
                 <h2>Rules</h2>
                 <h3>Hover ON</h3>
+                <p class="bolded-header"><b>Overall Card</b></p>
+                    <ul>
+                        <li>Hover animation eases in within 0.3 seconds</li>
+                        <ul>
+                            <li>Card increases in size</li>
+                            <li>Card's drop-shadow grows on all sides</li>
+                    </ul>
+                </ul>
+                <p class="bolded-header"><b>"View case study" Button</b></p>
                 <ul>
                     <li>Cursor changes to finger immediately</li>
-                    <li>Button text changes to bold</li>
-                    <li>Button moves up by 5 pixels</li>
-                    <li>The hover animation happens smoothly with a 0.3-second transition (using transition: all .3s ease .1s;), starting after a 0.1-second delay</li>
+                    <li>Hover animation happens smoothly in 0.3 seconds (using transition: all .3s ease .1s;), starting after a 0.1-second delay</li>
+                    <ul>
+                        <li>Button text changes to bold</li>
+                        <li>Button moves up by 5 pixels</li>
+                    </ul>
                 </ul>
-                <h3>Hover OFF</h3>
-            <ul>
-                <li>Cursor changes back to pointer immediately</li>
-                <li>Button text goes back to its original font weight</li>
-                <li>Button back down to original position</li>
-                <li>Same 0.3-second transition with the 0.1-second delay is applied</li>
-            </ul>
-    
+                <p class="bolded-header"><b>Logo Icon</b></p>
+                    <ul>
+                        <li>Icon scales and rotates 4 degrees smoothly within 0.3 seconds</li>
+                        <li>Cursor changes to finger immediately</li>
+                    </ul>
+            <h3>Hover OFF</h3>
+            <p class="bolded-header"><b>Overall Card</b></p>
+                <ul>
+                    <li>Card and shadow return to original state with the same 0.3-second animation. </li>
+                </ul>
+                <p class="bolded-header"><b>"View case study" Button</b></p>
+                    <ul>
+                        <li>Cursor changes back to pointer immediately</li>
+                        <li>Same 0.3-second animation with the 0.1-second delay is applied</li>
+                        <ul>
+                            <li>Button text goes back to its original font weight</li>
+                            <li>Button back down to original position</li>
+                        </ul>
+                    </ul>
+                    <p class="bolded-header"><b>Logo Icon</b></p>
+                    <ul>
+                        <li>Icon reverses to original state smoothly within 0.3 seconds</li>
+                        <li>Cursor changes back to pointer immediately</li>
+                    </ul>
             <h3>Click</h3>
-            <ul>
-                <li>The finger reverts back to a cursor</li>
-                <li>The current page disappears, loading a new page (case study page)</li>
-            </ul>
-            </div>
-            <div class="detail-box">
-                <h2>Feedback</h2>
-                <h3>Hover ON</h3>
-                <ul>
-                    <li>Cursor changes to finger immediately</li>
-                    <li>Button text changes to bold</li>
-                    <li>Button moves up by 5 pixels</li>
-                    <li>The hover animation happens smoothly with a 0.3-second transition (using transition: all .3s ease .1s;), starting after a 0.1-second delay</li>
-                </ul>
-            
-                <h3>Hover OFF</h3>
-                <ul>
-                    <li>Cursor changes back to pointer immediately</li>
-                    <li>Button text goes back to its original font weight</li>
-                    <li>Button back down to original position</li>
-                    <li>Same 0.3-second transition with the 0.1-second delay is applied</li>
-                </ul>
-        
-                <h3>Click</h3>
+            <p class="bolded-header"><b>"View case study" Button</b></p>
                 <ul>
                     <li>The finger reverts back to a cursor</li>
                     <li>The current page disappears, loading a new page (case study page)</li>
                 </ul>
             </div>
+
+
+            <div class="detail-box">
+                <h2>Feedback</h2>
+                <h2>Rules</h2>
+                <h3>Hover ON</h3>
+                <p class="bolded-header"><b>Overall Card</b></p>
+                    <ul>
+                        <li>Hover animation eases in within 0.3 seconds</li>
+                        <ul>
+                            <li>Card increases in size</li>
+                            <li>Card's drop-shadow grows on all sides</li>
+                    </ul>
+                </ul>
+                <p class="bolded-header"><b>"View case study" Button</b></p>
+                <ul>
+                    <li>Cursor changes to finger immediately</li>
+                    <li>Hover animation happens smoothly in 0.3 seconds (using transition: all .3s ease .1s;), starting after a 0.1-second delay</li>
+                    <ul>
+                        <li>Button text changes to bold</li>
+                        <li>Button moves up by 5 pixels</li>
+                    </ul>
+                </ul>
+                <p class="bolded-header"><b>Logo Icon</b></p>
+                    <ul>
+                        <li>Icon scales and rotates 4 degrees smoothly within 0.3 seconds</li>
+                        <li>Cursor changes to finger immediately</li>
+                    </ul>
+            <h3>Hover OFF</h3>
+            <p class="bolded-header"><b>Overall Card</b></p>
+                <ul>
+                    <li>Card and shadow return to original state with the same 0.3-second animation. </li>
+                </ul>
+                <p class="bolded-header"><b>"View case study" Button</b></p>
+                    <ul>
+                        <li>Cursor changes back to pointer immediately</li>
+                        <li>Same 0.3-second animation with the 0.1-second delay is applied</li>
+                        <ul>
+                            <li>Button text goes back to its original font weight</li>
+                            <li>Button back down to original position</li>
+                        </ul>
+                    </ul>
+                    <p class="bolded-header"><b>Logo Icon</b></p>
+                    <ul>
+                        <li>Icon reverses to original state smoothly within 0.3 seconds</li>
+                        <li>Cursor changes back to pointer immediately</li>
+                    </ul>
+            <h3>Click</h3>
+
+
+
+            <p class="bolded-header"><b>"View case study" Button</b></p>
+                <ul>
+                    <li>The finger reverts back to a cursor</li>
+                    <li>The current page disappears, loading a new page (case study page)</li>
+                </ul>
+            </div>
+
+
+            
             <div class="detail-box">
                 <h2>Loops &amp; Modes</h2>
             <ul>
                 <li>No loops</li>
-                <li>Mode: When the user clicks on the button, a new screen appears as the user is navigated to the case study page</li>
+                <li>Mode for "View case study" Button: New window opens when clicked</li>
             </ul>
             </div>
             

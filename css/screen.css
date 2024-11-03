@@ -552,7 +552,7 @@ video {
 
 /*  New Redesign Classes */
 
-.cardcontainer {
+/* .cardcontainer {
     align-items: flex-start;
     border-radius: var(--border-radius);
     display: flex;
@@ -561,7 +561,27 @@ video {
     align-self: stretch;
     transition: all .3s ease-in;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+} */
+.cardcontainer-new {
+    position: relative; /* Makes it the positioning context for absolutely positioned children */
+    align-items: flex-start;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-self: stretch;
+    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* New hover effect class for enlarged shadow */
+.cardcontainer:hover {
+    transform: scale(1.02); /* Increases card size */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enlarged shadow effect */
+}
+
+
+
 .cardtitle {
     top: 1rem;
     position: relative;
@@ -600,14 +620,22 @@ video {
     
 }
 .card-icons-right {
-    display: flex;
+    /* display: flex;
     flex-flow: row nowrap;
     gap: .75rem;
     height: 4vh;
     inset-inline-end: 15px;
     position: absolute;
     top: 28px;
-    height: 39px;
+    height: 39px; */
+    position: absolute; /* Prevents the icons from shifting with card scale */
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.75rem;
+    top: 28px; /* Adjust as needed to align vertically */
+    right: 15px; /* Aligns to the right edge */
+    height: 39px; /* Keep height consistent */
+    transition: transform 0.3s ease; /* Optional smooth transition on hover */
 }
 
 
