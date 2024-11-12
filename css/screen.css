@@ -757,12 +757,11 @@ video {
     background-clip: text;
     color: transparent;
     transition: background-position 0.5s ease;
-    background-size: 200%; /* Extend gradient to create a subtle shift */
+    background-size: 200%; 
 }
 .card-title-final:hover {
-    background-position: right; /* Shift gradient slightly */
+    background-position: right; 
 }
 .card1-final {
     background-color: white;
-    /* box-shadow: 2px 4px 12px #00000014;; */
 }
