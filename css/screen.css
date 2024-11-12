@@ -328,6 +328,28 @@ video {
     margin-bottom: 8vh;
     margin-top: 2vh;
 }
+
+.projects-betabuild {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 3vh;
+    margin-bottom: 8vh;
+    margin-top: 2vh;
+}
+@media screen and (min-width: 768px) {
+    .projects-betabuild {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .projects-betabuild {
+        display: grid;
+        grid-template-columns: 400px 400px;
+    }
+}
+
 /* DELETE LATER    DELETE LATER    DELETE LATER    DELETE LATER    DELETE LATER     DELETE LATER     DELETE LATER     DELETE LATER    DELETE LATER
 
 */
@@ -495,7 +517,7 @@ video {
     width: 100%;
 }
 
-.button-card {
+.button-card, .button-card-final {
     color: var(--secondary-text);
     font-family: var(--font-primary);
     font-size: 1rem;
@@ -758,3 +780,9 @@ video {
 .card1-final {
     background-color: white;
 }
+
+/* New class for click animation feedback */
+/* .button-click-feedback {
+    transform: scale(0.95); 
+    transition: transform 0.1s ease;
+} */
