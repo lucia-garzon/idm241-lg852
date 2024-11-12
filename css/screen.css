@@ -742,7 +742,7 @@ video {
 .snapshot-image {
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
 /* Hover effect only on the image */
