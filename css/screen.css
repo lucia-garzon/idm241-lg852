@@ -753,20 +753,8 @@ video {
 .card-title-final {
     top: 17px;
     position: relative;
-    /* background-image: linear-gradient(90deg, var(--amz-blue), var(--project-1-dark));
-    background-clip: text;
-    color: transparent;
-    transition: background-position 0.5s ease;
-    background-size: 200%;  */
-    background-image: linear-gradient(90deg, #0073e6, #003366, #0073e6);
-    background-clip: text;
-    color: transparent;
-    background-size: 200%; /* Extend for gradient movement */
-    transition: background-position 0.1s ease; /* Smooth adjustment */
 }
-/* .card-title-final:hover {
-    background-position: right; 
-} */
+
 .card1-final {
     background-color: white;
 }
