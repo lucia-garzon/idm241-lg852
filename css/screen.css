@@ -126,10 +126,10 @@ h3 {
 .white-text {
     color: var(--secondary-text);
 }
-.alpha-build, .beta {
+.alpha-build, .beta, .final {
     margin-bottom: 5vh;
 }
-.alpha-title {
+.alpha-title, .final-title {
     margin-top: 7vh;
     margin-bottom: 7vh;
     line-height: 35px;
@@ -686,7 +686,7 @@ video {
     -webkit-transform: scale(1.01);
     transform: scale(1.01);
 }
-
+/* 
 .card-overlay {
     opacity: 0;
     border-radius: var(--border-radius);
@@ -715,4 +715,37 @@ video {
 }
 .cardcontainer-new:hover .card-image-1 {
     filter: blur(1px); 
+} */
+
+/*  Final */
+
+.cardcontainer-final {
+    position: relative; /* Makes it the positioning context for absolutely positioned children */
+    align-items: flex-start;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-self: stretch;
+    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+/* New hover effect class for enlarged shadow */
+.cardcontainer-final:hover {
+    transform: scale(1.02); /* Increases card size */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enlarged shadow effect */
+}
+
+/* Style for the snapshot image with hover effect */
+.snapshot-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the snapshot image */
+.cardcontainer-final:hover .snapshot-image {
+    transform: scale(1.1); /* Zoom in by 10% */
 }
