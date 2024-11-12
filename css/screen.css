@@ -58,6 +58,8 @@ html {
     --project-5-light: #E4FCCF;
     --project-5-dark: #4B5A2B;
 
+    --amz-blue: #017185;
+
     --border-radius: 20px;
 }
 
@@ -685,3 +687,32 @@ video {
     transform: scale(1.01);
 }
 
+.card-overlay {
+    opacity: 0;
+    border-radius: var(--border-radius);
+    transform: translateY(10px);
+    transition: opacity .3s ease, transform .3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--amz-blue);
+    color: white;
+    padding: 8px;
+    pointer-events: none; 
+}
+
+.card-overlay ul li {
+    color: white;
+}
+
+.cardcontainer-new:hover .card-overlay {
+    opacity: 0.85;
+    transform: translateY(0);
+}
+.card-image-1 {
+    transition: filter 0.3s ease;
+}
+.cardcontainer-new:hover .card-image-1 {
+    filter: blur(1px); 
+}
