@@ -753,14 +753,31 @@ video {
 .card-title-final {
     top: 17px;
     position: relative;
-    background-image: linear-gradient(90deg, var(--amz-blue), var(--project-1-dark));
+    /* background-image: linear-gradient(90deg, var(--amz-blue), var(--project-1-dark));
     background-clip: text;
     color: transparent;
     transition: background-position 0.5s ease;
-    background-size: 200%; 
+    background-size: 200%;  */
+    background-image: linear-gradient(90deg, #0073e6, #003366, #0073e6); /* Adjust colors as desired */
+    background-clip: text;
+    color: transparent;
+    background-size: 200%; /* Extend the gradient for movement */
+    background-position: 0%; /* Ensure starting position */
+    transition: background-position 0.3s ease; /* Smooth transition on hover */
 }
 .card-title-final:hover {
-    background-position: right; 
+    /* background-position: right;  */
+    background-position: 100%; /* Move gradient across the text on hover */
+    animation: gradientHoverShift 1.5s ease forwards; /* Single animation forward on hover */
+}
+/* Keyframes for gradient movement on hover */
+@keyframes gradientHoverShift {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
 }
 .card1-final {
     background-color: white;
