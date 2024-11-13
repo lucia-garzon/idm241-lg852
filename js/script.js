@@ -1,21 +1,16 @@
-// Select the title element
-const title = document.querySelector('.card-title-final');
+function animateAndNavigate(event) {
+    event.preventDefault();
 
-// Event listener for mouse movement over the title
-title.addEventListener('mousemove', (e) => {
-    // Get the position of the mouse relative to the element
-    const rect = title.getBoundingClientRect();
-    const x = e.clientX - rect.left; // Mouse position within the element
-    const width = title.offsetWidth; // Width of the title element
+    const button = event.target;
+    button.classList.add('clicked');
 
-    // Calculate background position as a percentage based on mouse position
-    const percentage = (x / width) * 100;
+    // Listen for the end of the animation to remove the class
+    button.addEventListener('transitionend', () => {
+        button.classList.remove('clicked');
+    }, { once: true });
 
-    // Set background position for dynamic gradient movement
-    title.style.backgroundPosition = `${percentage}% center`;
-});
-
-// Reset the gradient position when the mouse leaves the title
-title.addEventListener('mouseleave', () => {
-    title.style.backgroundPosition = '0% center'; // Reset to the starting position
-});
+    // Navigate after animation completes
+    setTimeout(() => {
+        window.open(button.getAttribute('data-url'), '_blank');
+    }, 300);  // Match this to your animation duration
+}
