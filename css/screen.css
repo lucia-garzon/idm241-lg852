@@ -320,7 +320,7 @@ video {
 
 /*  CARDS   CARDS   CARDS    CARDS    CARDS    CARDS    */
 
-.projects {
+.projects, .projects-final {
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
@@ -389,7 +389,7 @@ video {
 
 
 @media screen and (min-width: 732px) { 
-    .projects {
+    .projects, .projects-final {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -402,7 +402,7 @@ video {
 
 
 @media screen and (min-width: 1130px) and (max-width: 1220px) {
-    .projects {
+    .projects, .projects-final {
         display: grid;
         grid-template-columns: 33vw 33vw;
         grid-template-rows: 47vw 47vw;
@@ -412,7 +412,7 @@ video {
     }
 }
 @media screen and (min-width: 1220px) {
-    .projects {
+    .projects, .projects-final {
         display: grid;
         grid-template-columns: 30vw 30vw;
         grid-template-rows: 1fr 1fr;
@@ -526,7 +526,6 @@ video {
     transition: all .3s ease .1s;
     margin-top: 1rem;
     margin-bottom: .8rem;
-
     padding: 20px 20px; 
     border-radius: var(--border-radius);
     text-align: center; 
@@ -781,8 +780,10 @@ video {
     background-color: white;
 }
 
-/* New class for click animation feedback */
-/* .button-click-feedback {
-    transform: scale(0.95); 
-    transition: transform 0.1s ease;
-} */
+
+
+.button-card-final.clicked {
+    transform: scale(0.9);
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.15s ease; 
+}
