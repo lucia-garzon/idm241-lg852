@@ -14,7 +14,7 @@
             <p>Link to: <a target="_blank" href="https://lucia-garzon.com/" class="link">Original Interface</a></p>
 
         <!-- **** delete overlay in card1 **** -->
-        <!-- <section class="projects">
+        <!-- <section class="projects-final">
             <div class="cardcontainer-final card1-final">
                 <div class="card-info">
                     <div class="card-icons-right">
@@ -28,7 +28,7 @@
                     
                         <p class="cardtext">Simplified customer-driver communication with delivery instructions redesign.</p>
     
-                        <a class="button-card button-card1" href="https://luciagarzon.vercel.app/amazon.html" target="_blank">View case study</a>
+                        <a class="button-card-final button-card1" data-url="https://luciagarzon.vercel.app/amazon.html" onclick="animateAndNavigate(event)">View Case Study</a>
                     </div>
                     
 
@@ -56,7 +56,7 @@
                     
                         <p class="cardtext">PhillyReach is a <b>program-finder website</b> for youth in Philadelphia.</p>
     
-                        <a class="button-card button-card2" href="https://luciagarzon.vercel.app/phillyreach.html" target="_blank">View case study</a>
+                        <a class="button-card-final button-card2" href="https://luciagarzon.vercel.app/phillyreach.html" target="_blank">View Case Study</a>
                     </div>
                 </div>
                 <img class="card-image-1" alt="Phillyreach snapshot" src="graphics/index-phillyreach.png">
@@ -72,7 +72,7 @@
                 </div>
                 
                 
-                <a class="button-card button-card3" href="proj-2.html">View case study</a>
+                <a class="button-card-final button-card3" href="proj-2.html">View Case Study</a>
             
                 <img class="card-image-1" alt="Michoacana snapshot" src="graphics/index-michoacana.png">
             </div>
@@ -86,7 +86,7 @@
                     <img alt="Figma icon" src="images/figma_icon.svg">
                 </div>
                 
-                <a class="button-card button-card4" href="proj-3.html">View case study</a>
+                <a class="button-card-final button-card4" href="proj-3.html">View Case Study</a>
             
                 <img class="card-image-2" alt="Inkling snapshot" src="graphics/index-inkling.png">
             </div>
@@ -107,7 +107,7 @@
                 <li>Hover OFF</li>
             </ul>
 
-            <h3>"View case study" Button</h3>
+            <h3>"View Case Study" Button</h3>
             <ul>
                 <li>Hover ON</li>
                 <ul>
@@ -152,7 +152,7 @@
                             <li>Card image increases in size by 10%</li>
                     </ul>
                 </ul>
-                <p class="bolded-header"><b>"View case study" Button</b></p>
+                <p class="bolded-header"><b>"View Case Study" Button</b></p>
                 <ul>
                     <li>Cursor changes to finger immediately</li>
                     <li>Hover animation happens smoothly in 0.3 seconds (using transition: all .3s ease .1s;), starting after a 0.1-second delay</li>
@@ -180,7 +180,7 @@
                     <li>Card and shadow return to original state with the same 0.3-second animation. </li>
                     <li>The colored bar containing tags slides back down to the bottom, fading out</li>
                 </ul>
-                <p class="bolded-header"><b>"View case study" Button</b></p>
+                <p class="bolded-header"><b>"View Case Study" Button</b></p>
                     <ul>
                         <li>Cursor changes back to pointer immediately</li>
                         <li>Same 0.3-second animation with the 0.1-second delay is applied</li>
@@ -205,10 +205,17 @@
                     </ul>
                     
             <h3>Click</h3>
-            <p class="bolded-header"><b>"View case study" Button</b></p>
+            <p class="bolded-header"><b>"View Case Study" Button</b></p>
                 <ul>
                     <li>The finger reverts back to a cursor</li>
-                    <li>The current page disappears, loading a new page (case study page)</li>
+                    <li>Button scales down to 90% of its original size within 0.3 seconds</li>
+                    <li>Button opacity reduces to 0.9, fading smoothly within 0.15 seconds</li>
+                    <li>The event.preventDefault() method is called immediately, blocking the button's default hyperlink action (preventing instant navigation)
+                    </li>
+                    <li>The clicked class is added to initiate the animation (scaling down, fading smoothly) 
+                    </li>
+                    <li>After the animation completes, the clicked class is removed automatically, resetting the button's state for future interactions</li>
+                    <li>After page navigation is delayed by .3s (matching the animation duration), the case study page opens in a new tab</li>
                 </ul>
             </div>
 
@@ -232,7 +239,7 @@
                             <li>Card image increases in size by 10%</li>
                     </ul>
                 </ul>
-                <p class="bolded-header"><b>"View case study" Button</b></p>
+                <p class="bolded-header"><b>"View Case Study" Button</b></p>
                 <ul>
                     <li>Cursor changes to finger immediately</li>
                     <li>Hover animation happens smoothly in 0.3 seconds (using transition: all .3s ease .1s;), starting after a 0.1-second delay</li>
@@ -260,7 +267,7 @@
                     <li>Card and shadow return to original state with the same 0.3-second animation. </li>
                     <li>The colored bar containing tags slides back down to the bottom, fading out</li>
                 </ul>
-                <p class="bolded-header"><b>"View case study" Button</b></p>
+                <p class="bolded-header"><b>"View Case Study" Button</b></p>
                     <ul>
                         <li>Cursor changes back to pointer immediately</li>
                         <li>Same 0.3-second animation with the 0.1-second delay is applied</li>
@@ -285,10 +292,12 @@
                     </ul>
                     
             <h3>Click</h3>
-            <p class="bolded-header"><b>"View case study" Button</b></p>
+            <p class="bolded-header"><b>"View Case Study" Button</b></p>
                 <ul>
                     <li>The finger reverts back to a cursor</li>
-                    <li>The current page disappears, loading a new page (case study page)</li>
+                    <li>Button scales down to 90% of its original size within 0.3 seconds</li>
+                    <li>Button opacity reduces to 0.9, fading smoothly within 0.15 seconds</li>
+                    <li>After page navigation is delayed by .3s (matching the animation duration), the case study page opens in a new tab</li>
                 </ul>
             </div>
 
@@ -298,7 +307,7 @@
                 <h2>Loops &amp; Modes</h2>
             <ul>
                 <li>No loops</li>
-                <li>Mode for "View case study" Button: New window opens when clicked</li>
+                <li>Mode for "View Case Study" Button: New window opens when clicked</li>
             </ul>
             </div>
             
@@ -314,6 +323,6 @@
 
 
     </main>
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 </html>
