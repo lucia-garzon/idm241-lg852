@@ -61,6 +61,12 @@ html {
     --amz-blue: #017185;
 
     --border-radius: 20px;
+
+    --zeroeyes-dark: #0A0B0E;
+    --zeroeyes-gray: #AAB5BD;
+    --zeroeyes-red: #E9393A;
+    --border-radius: 20px;
+    --amz-dark: #0F1111;
 }
 
 * {
@@ -517,7 +523,7 @@ video {
     width: 100%;
 }
 
-.button-card, .button-card-final {
+.button-card {
     color: var(--secondary-text);
     font-family: var(--font-primary);
     font-size: 1rem;
@@ -531,6 +537,21 @@ video {
     text-align: center; 
     width: fit-content;
 }
+.button-card-final {
+    color: var(--secondary-text);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer; 
+    transition: all .3s ease .1s;
+    margin-top: 1rem;
+    margin-bottom: .8rem;
+    padding: 20px 20px; 
+    border-radius: var(--border-radius);
+    text-align: center; 
+    width: fit-content;
+    margin-bottom: 2rem;
+}
 .button-card1 {
     background-color: var(--project-1-dark);
 }
@@ -541,7 +562,11 @@ video {
     background-color: var(--project-3-dark);
 }
 .button-card4 {
-    background-color: var(--project-4-dark);
+    background-color: var(--zeroeyes-gray);
+}
+.button-cardze {
+    background-color: var(--zeroeyes-gray);
+    color: var(--zeroeyes-dark);
 }
 .button-card1:hover {
     font-style: normal;
@@ -569,6 +594,13 @@ video {
     font-weight: 500;
     border-radius: var(--border-radius);
     background-color: var(--project-4-dark);
+    transform: translateY(-5px);
+}
+.button-cardze:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    background-color: var(--zeroeyes-gray);
     transform: translateY(-5px);
 }
 
@@ -615,6 +647,17 @@ video {
 }
 .card2 {
     background-color: var(--project-2-light)
+}
+.card4 {
+    background-color: var(--project-3-light);
+}
+.card-ze {
+    background-color: #0A0B0E;
+    /* box-shadow: 2px 4px 12px #00000014;; */
+    color: white;
+}
+.ze {
+    color: white;
 }
 .cardtext {
     margin: .5vh;
