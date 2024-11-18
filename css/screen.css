@@ -729,6 +729,9 @@ video {
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
+    max-width: 40px;
+    max-height: 38px;
+    object-fit: contain; /* Ensures aspect ratio is preserved */
 }
 .tool-logo:hover, .tool-logo:focus, .tool-logo:active{
     -webkit-transform: scale(1.1) rotate(4deg);
@@ -739,14 +742,16 @@ video {
 .logo-wrapper {
     position: relative;
     display: inline-block; /* Keeps logo and tooltip grouped */
+    text-align: center; /* Ensures alignment */
 }
 
 /* Tooltip Base Styles */
 .tooltip {
     position: absolute;
-    bottom: 100%; /* Positions tooltip above the logo */
+    bottom: calc(100% + 10px); /* Positions tooltip above and adds 10px gap */
     left: 50%;
     transform: translateX(-50%) scale(0); /* Initially hidden and scaled down */
+    font-family: var(--font-primary);
     background-color: rgba(0, 0, 0, 0.8); /* Dark background */
     color: white;
     padding: 0.5rem;
@@ -756,7 +761,7 @@ video {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0; /* Hidden by default */
     transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 10; /* Keeps it above other elements */
+    z-index: 999; /* Makes sure it stays above other elements */
 }
 
 /* Tooltip Arrow */
@@ -776,6 +781,7 @@ video {
     transform: translateX(-50%) scale(1); /* Scales up */
     opacity: 1; /* Becomes visible */
 }
+
 
 .hvr-grow {
     vertical-align: middle;
@@ -841,6 +847,11 @@ video {
 .cardcontainer-final:hover {
     transform: scale(1.02); /* Increases card size */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enlarged shadow effect */
+}
+
+/* Ensure the tooltip displays outside the card */
+.cardcontainer-final {
+    overflow: visible; /* Allows the tooltip to overflow */
 }
 
 /* Style for the snapshot image with hover effect */
