@@ -735,6 +735,47 @@ video {
     transform: scale(1.1) rotate(4deg);
     cursor: pointer;
 }
+/* Wrapper for logo and tooltip */
+.logo-wrapper {
+    position: relative;
+    display: inline-block; /* Keeps logo and tooltip grouped */
+}
+
+/* Tooltip Base Styles */
+.tooltip {
+    position: absolute;
+    bottom: 100%; /* Positions tooltip above the logo */
+    left: 50%;
+    transform: translateX(-50%) scale(0); /* Initially hidden and scaled down */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap; /* Prevents text wrapping */
+    font-size: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Hidden by default */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 10; /* Keeps it above other elements */
+}
+
+/* Tooltip Arrow */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Positions arrow at the bottom of tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover */
+.logo-wrapper:hover .tooltip {
+    transform: translateX(-50%) scale(1); /* Scales up */
+    opacity: 1; /* Becomes visible */
+}
 
 .hvr-grow {
     vertical-align: middle;
