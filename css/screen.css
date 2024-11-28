@@ -409,7 +409,7 @@ video {
 
 
 
-@media screen and (min-width: 1130px) and (max-width: 1220px) {
+@media screen and (min-width: 1130px) and (max-width: 1200px) {
     .projects, .projects-final {
         display: grid;
         grid-template-columns: 33vw 33vw;
@@ -546,13 +546,13 @@ video {
     text-decoration: none;
     cursor: pointer; 
     transition: all .3s ease .1s;
-    margin-top: 1rem;
+    margin-top: 8px;
     margin-bottom: .8rem;
-    padding: 20px 20px; 
+    padding: 16px 20px; 
     border-radius: var(--border-radius);
     text-align: center; 
     width: fit-content;
-    margin-bottom: 2rem;
+    margin-bottom: 1.7rem;
 }
 .button-card1 {
     background-color: var(--project-1-dark);
@@ -905,6 +905,8 @@ video {
 .card-title-final {
     top: 17px;
     position: relative;
+    margin-bottom: 19px;
+    font-size: 3.5vh;
 }
 
 .card1-final {
