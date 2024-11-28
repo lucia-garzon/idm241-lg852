@@ -67,6 +67,8 @@ html {
     --zeroeyes-red: #E9393A;
     --border-radius: 20px;
     --amz-dark: #0F1111;
+    --amz-lightblue: #DEFAFE;
+    --amz-navyblue: #095F76;
 }
 
 * {
@@ -555,6 +557,16 @@ video {
 .button-card1 {
     background-color: var(--project-1-dark);
 }
+.button-card1-final {
+    background-color: var(--amz-blue);
+}
+.button-card1-final:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    background-color: var(--amz-blue);
+    transform: translateY(-5px);
+}
 .button-card2 {
     background-color: var(--project-2-dark);
 }
@@ -665,7 +677,7 @@ video {
 }
 @media screen and (min-width: 515px) and (max-width: 732px) { 
     .cardtext {
-        min-width: 39ch;
+        min-width: 32ch;
     }
     
 }
@@ -676,6 +688,11 @@ video {
     text-align: left;  
     width: 100%;
     padding: 0 1rem 0 2rem;
+}
+@media screen and (max-width: 400px) {
+    .card-info {
+        padding: 0 1rem 0 1.5rem;
+    }
 }
 .card-left { 
     display: flex;
@@ -922,6 +939,56 @@ video {
     transform: translateX(-50%) translateY(0);  /* Animate up */
 }
 
+
+.hb-amz {
+    background-color: var(--amz-navyblue);
+    /* border-top: 1px solid lightslategray; */
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease .1s;
+}
+.hb-amz:hover {
+    background-color: #074454;
+    /* border-top: 1px solid lightslategray; */
+}
+.ht-amz {
+    color: var(--amz-lightblue);
+}
+
+.hb-ze {
+    background-color: var(--zeroeyes-gray);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease .1s;
+}
+.hb-ze:hover {
+    background-color: #858E96;
+}
+.ht-ze {
+    color: var(--zeroeyes-dark);
+}
+
+.hb-cbk {
+    background-color: var(--project-2-dark);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease .1s;
+}
+.hb-cbk:hover {
+    background-color: #002538;
+}
+.ht-cbk {
+    color: var(--project-2-light);
+}
+
+.hb-mich {
+    background-color: var(--project-3-dark);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease .1s;
+}
+.hb-mich:hover {
+    background-color: #850E34;
+}
+.ht-mich {
+    color: var(--project-3-light);
+}
 /* Text inside the hover bar */
 .hover-text {
     font-size: 1rem; 
@@ -929,15 +996,16 @@ video {
 }
 
 /* Bold effect on hover for individual text spans */
-.hover-text:hover {
+/* .hover-text:hover {
     font-weight: bold;
     color: var(--main-background);
-}
+} */
 @media (min-width: 730px) and (max-width: 1300px) {
     .hover-text {
         font-size: 0.9rem; /* Slightly smaller font size on smaller screens */
     }
 }
+
 /* hover bar! end */
 
 
