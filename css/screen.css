@@ -906,7 +906,23 @@ video {
     top: 17px;
     position: relative;
     margin-bottom: 19px;
-    font-size: 3.5vh;
+    font-size: 20px;
+}
+@media screen and (min-width: 500px) and (max-width: 730px) {
+    .card-title-final {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .card-title-final {
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .card-title-final {
+        font-size: 28px;
+    }
 }
 
 .card1-final {
