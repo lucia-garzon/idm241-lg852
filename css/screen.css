@@ -706,6 +706,19 @@ video {
     z-index: 2; /* Icons are above other card content */
 
 }
+.card-icons-final {
+    position: absolute; /* Prevents the icons from shifting with card scale */
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.75rem;
+    top: 28px; /* Adjust as needed to align vertically */
+    right: 24px; /* Aligns to the right edge */
+    height: 39px; /* Keep height consistent */
+    transition: transform 0.3s ease; /* Optional smooth transition on hover */
+
+    z-index: 2; /* Icons are above other card content */
+
+}
 
 
 /*  Drop Shadow Animation */
@@ -758,7 +771,7 @@ video {
     font-family: var(--font-primary);
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 0.5rem;
+    padding: 0.4rem;
     border-radius: 0.25rem;
     white-space: nowrap;
     font-size: 0.8rem;
@@ -766,7 +779,7 @@ video {
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 999;
-    }
+}
 
 
 /* Tooltip Arrow */
@@ -843,7 +856,7 @@ video {
     flex-flow: column nowrap;
     text-align: center;
     align-self: stretch;
-    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
 }
@@ -858,6 +871,7 @@ video {
 .cardcontainer-final {
     overflow: visible; /* Allows the tooltip to overflow */
 }
+
 
 /* Style for the snapshot image with hover effect */
 .snapshot-image {
@@ -880,6 +894,51 @@ video {
     background-color: white;
 }
 
+/* hover bar! */
+/* Hover bar style, hidden by default */
+.hover-bar {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;  /* At the bottom of the card */
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);  /* Initially hidden below */
+    background-color: var(--amz-dark);
+    color: white;
+    padding: 0.5rem;
+    font-family: var(--font-primary);
+    color: var(--zeroeyes-gray);
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    z-index: 2;  /* Ensure it appears above the image */
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.5s ease;  /* Longer transition time for smooth movement */
+}
+
+/* Show hover bar when card is hovered */
+.cardcontainer-final:hover .hover-bar {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);  /* Animate up */
+}
+
+/* Text inside the hover bar */
+.hover-text {
+    font-size: 1rem; 
+    transition: font-weight 0.3s ease; 
+}
+
+/* Bold effect on hover for individual text spans */
+.hover-text:hover {
+    font-weight: bold;
+    color: var(--main-background);
+}
+@media (min-width: 730px) and (max-width: 1300px) {
+    .hover-text {
+        font-size: 0.9rem; /* Slightly smaller font size on smaller screens */
+    }
+}
+/* hover bar! end */
 
 
 .button-card-final.clicked {
@@ -887,142 +946,3 @@ video {
     opacity: 0.9;
     transition: transform 0.3s ease, opacity 0.15s ease; 
 }
-
-/* /proposed classes */
-/* Card Container *//* Project Card */
-/* Project Card */
-.project-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #121212; /* Matches the dark theme */
-    color: white;
-    padding: 2rem;
-    border-radius: 20px;
-    overflow: hidden; /* Keeps the snapshot image clipped */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    background-color: white;
-    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
-
-}
-.project-card:hover {
-    
-        transform: scale(1.02); /* Increases card size */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enlarged shadow effect */
-    
-    
-}
-
-/* Project Header (Title + Icons Container) */
-.project-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem; /* Space between header and description */
-}
-
-.project-name {
-    font-family: var(--font-primary);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* Icon Container */
-.icons-container {
-    display: flex;
-    gap: 1rem; /* Space between icons */
-    align-items: center; /* Aligns icons vertically with the title */
-}
-
-.icon-item {
-    position: relative;
-}
-
-.icon-image {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    transition: transform 0.2s ease-in-out;
-}
-
-.icon-image:hover {
-    transform: scale(1.1) rotate(4deg);
-}
-
-/* Tooltip */
-.icon-tooltip {
-    position: absolute;
-    bottom: calc(100% + 8px); /* Space between icon and tooltip */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    font-size: 0.75rem;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-    z-index: 3;
-}
-
-.icon-item:hover .icon-tooltip {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Project Description */
-.project-summary {
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #eaeaea; /* Light gray for better contrast */
-}
-
-/* Call-to-Action Link */
-.project-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.cta-link {
-    display: inline-block;
-    background-color: #1e90ff; /* Light blue button */
-    color: #fff;
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-link:hover {
-    background-color: #0c7bff;
-    transform: scale(1.05);
-}
-
-/* Image Container */
-.image-container {
-    position: relative;
-    margin-top: 1.5rem;
-    overflow: hidden; /* Keeps the image clipped inside the container */
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the image fits properly */
-    border-radius: 10px;
-}
-
-
