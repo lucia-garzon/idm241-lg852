@@ -770,24 +770,29 @@ video {
     transition-property: transform;
     max-width: 40px;
     max-height: 38px;
-    object-fit: contain; /* Ensures aspect ratio is preserved */
+    object-fit: contain; 
 }
-.tool-logo:hover, .tool-logo:focus, .tool-logo:active{
-    -webkit-transform: scale(1.1) rotate(4deg);
-    transform: scale(1.1) rotate(4deg);
-    cursor: pointer;
-}
-/* tool-logo click */
-.clicked-logo {
-    transform: scale(0.85);
-    opacity: 0.7;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+.tool-logo {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: transform 0.3s;
+    max-width: 40px;
+    max-height: 38px;
+    object-fit: contain; 
 }
 
-.clicked-logo:hover {
-    transform: scale(1); /* Optional: Reset on hover */
-    opacity: 1;
+.tool-logo:hover {
+    transform: scale(1.1) rotate(4deg); 
+    cursor: pointer;
 }
+.tool-logo.clicked-logo {
+    transform: scale(0.85) rotate(8deg); /* Define distinct clicked transformation */
+    opacity: 0.5; /* Ensure opacity is included */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Transition for click animation */
+}
+
 
 /* Wrapper for logo and tooltip */
 .logo-wrapper {
