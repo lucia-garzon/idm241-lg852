@@ -63,37 +63,83 @@ document.querySelectorAll('.logo-wrapper').forEach((wrapper) => {
 //     }, 300);
 // }
 
+// function handleIconClick(event) {
+//     const target = event.currentTarget;
+//     const link = target.getAttribute('data-link');
+//     const type = target.getAttribute('data-type');
+//     const logoImage = target.querySelector('.tool-logo'); 
+//     if (logoImage) {
+//         logoImage.classList.add('clicked-logo');
+//     }
+
+//     setTimeout(() => {
+        
+//         if (logoImage) {
+//             logoImage.classList.remove('clicked-logo');
+//         }
+
+//         if (type === 'section') {
+//             window.location.href = link;
+//         } else if (type === 'external') {
+//             window.open(link, '_blank');
+//         }
+//     }, 300); 
+// }
+
+// const logos = document.querySelectorAll('.logo-wrapper');
+// logos.forEach(logo => {
+//     logo.addEventListener('click', handleIconClick);
+// });
+
+// function handleIconClick(event) {
+//     const target = event.currentTarget;
+//     const link = target.getAttribute('data-link');
+//     const type = target.getAttribute('data-type');
+//     const logoImage = target.querySelector('.tool-logo');
+
+//     if (logoImage) {
+//         logoImage.classList.add('clicked-logo');
+//     }
+
+//     setTimeout(() => {
+//         if (type === 'section' || type === 'external') {
+//             window.open(link, '_blank');
+//         }
+
+//         if (logoImage) {
+//             logoImage.classList.remove('clicked-logo');
+//         }
+//     }, 300); 
+// }
+
+// document.querySelectorAll('.logo-wrapper').forEach((logo) => {
+//     logo.addEventListener('click', handleIconClick);
+// });
+
 function handleIconClick(event) {
-    const target = event.currentTarget; // This is the logo-wrapper
+    const target = event.currentTarget;
     const link = target.getAttribute('data-link');
     const type = target.getAttribute('data-type');
-    const logoImage = target.querySelector('.tool-logo'); // Target the img for animation
+    const logoImage = target.querySelector('.tool-logo');
 
-    // Add animation class to the logo image
+    // Add animation class
     if (logoImage) {
         logoImage.classList.add('clicked-logo');
     }
 
+    // Open the link in a new tab
     setTimeout(() => {
-        // Remove animation class
+        if (type === 'section' || type === 'external') {
+            window.open(link, '_blank'); // Opens the link in a new tab
+        }
+
+        // Remove animation class after delay
         if (logoImage) {
             logoImage.classList.remove('clicked-logo');
         }
-
-        // Navigate based on type
-        if (type === 'section') {
-            window.location.href = link;
-        } else if (type === 'external') {
-            window.open(link, '_blank');
-        }
-    }, 300); // Adjust this timeout to match CSS animation duration
+    }, 600); // Increased delay to match CSS duration
 }
 
-// Attach click listener
-const logos = document.querySelectorAll('.logo-wrapper');
-logos.forEach(logo => {
-    logo.addEventListener('click', handleIconClick);
-});
 
 
 
