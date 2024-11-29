@@ -736,6 +736,12 @@ video {
     z-index: 2; /* Icons are above other card content */
 
 }
+@media screen and (min-width: 1200px) {
+    .tool-logo {
+        height: 35px; /* Keep height consistent */
+
+    }
+}
 
 
 /*  Drop Shadow Animation */
@@ -936,7 +942,11 @@ video {
         font-size: 28px;
     }
 }
-
+@media screen and (min-width: 730px) and (max-width: 780px) {
+    .card-title-final {
+        font-size: 18px;
+    }
+}
 .card1-final {
     background-color: white;
 }
