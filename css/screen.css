@@ -1045,14 +1045,14 @@ video {
     font-weight: bold;
     color: var(--main-background);
 } */
-@media (min-width: 730px) and (max-width: 1300px) {
+@media (min-width: 730px) and (max-width: 900px) {
     .hover-text {
         font-size: 0.8rem; /* Slightly smaller font size on smaller screens */
     }
 }
 @media (min-width: 370px) and (max-width: 440px) {
     .hover-text {
-        font-size: 0.78rem; /* Slightly smaller font size on smaller screens */
+        font-size: 0.85rem; /* Slightly smaller font size on smaller screens */
     }
 }
 /* hover bar! end */
