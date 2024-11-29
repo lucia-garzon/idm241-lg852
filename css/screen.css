@@ -742,6 +742,12 @@ video {
 
     }
 }
+@media screen and (min-width: 370px) and (max-width: 400px){
+    .tool-logo {
+        height: 34px; /* Keep height consistent */
+
+    }
+}
 
 
 /*  Drop Shadow Animation */
