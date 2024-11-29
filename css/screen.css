@@ -1050,7 +1050,11 @@ video {
         font-size: 0.8rem; /* Slightly smaller font size on smaller screens */
     }
 }
-
+@media (min-width: 370px) and (max-width: 440px) {
+    .hover-text {
+        font-size: 0.78rem; /* Slightly smaller font size on smaller screens */
+    }
+}
 /* hover bar! end */
 
 
