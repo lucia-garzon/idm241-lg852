@@ -201,13 +201,14 @@
                 <li>Click</li>
             </ul>
 
-            <h3>Logo Icon</h3>
+            <h3>Logo Icon(s)</h3>
             <ul>
                 <li>Hover ON</li>
                 <li>Hover OFF</li>
+                <li>Click</li>
             </ul>
 
-            <h3>Tags</h3>
+            <h3>Hover Bar</h3>
             <ul>
                 <li>Hover ON</li>
                 <li>Hover OFF</li>
@@ -223,7 +224,7 @@
                         <ul>
                             <li>Card increases in size</li>
                             <li>Card's drop-shadow grows on all sides</li>
-                            <li>Colored bar containing tags slides up from the bottom, fading in.</li>
+                            <li>Hover bar eases up (translateY(0)) within 0.5 seconds, going from 0 to 1 opacity in 0.3 seconds simultaneously</li>
                     </ul>
                 </ul>
                 <p class="bolded-header"><b>Card Image</b></p>
@@ -242,16 +243,20 @@
                         <li>Button moves up by 5 pixels</li>
                     </ul>
                 </ul>
-                <p class="bolded-header"><b>Logo Icon</b></p>
+                <p class="bolded-header"><b>Logo Icon(s)</b></p>
                     <ul>
                         <li>Icon scales and rotates 4 degrees smoothly within 0.3 seconds</li>
                         <li>Cursor changes to finger immediately</li>
-                    </ul>
-                <p class="bolded-header"><b>Tags</b></p>
-                    <ul>
-                        <li>Hover animation eases within 0.3 seconds</li>
+                        <li>Tooltip appears using smooth easing animation within 0.3 seconds</li>
                         <ul>
-                            <li>Tag text changes to bold</li>
+                            <li>Scales to full size (scale(1)) and transitions to full opacity (opacity: 1)</li>
+                        </ul>
+                    </ul>
+                <p class="bolded-header"><b>Hover Bar</b></p>
+                    <ul>
+                        <li>Hover animation eases within 0.3 seconds with a 0.1-second delay</li>
+                        <ul>
+                            <li>Background color changes to darker color</li>
                         </ul>
                     </ul>
                 
@@ -259,7 +264,7 @@
             <p class="bolded-header"><b>Overall Card</b></p>
                 <ul>
                     <li>Card and shadow return to original state with the same 0.3-second animation. </li>
-                    <li>The colored bar containing tags slides back down to the bottom, fading out</li>
+                    <li>Hover bar eases back down (translateY(20px)) within 0.5 seconds, going from 1 to 0 opacity in 0.3 seconds simultaneously</li>
                 </ul>
                 <p class="bolded-header"><b>"View Case Study" Button</b></p>
                     <ul>
@@ -270,17 +275,21 @@
                             <li>Button back down to original position</li>
                         </ul>
                     </ul>
-                <p class="bolded-header"><b>Logo Icon</b></p>
+                <p class="bolded-header"><b>Logo Icon(s)</b></p>
                     <ul>
                         <li>Icon reverses to original state smoothly within 0.3 seconds</li>
                         <li>Cursor changes back to pointer immediately</li>
+                        <li>Tooltip eases out smoothly within 0.3 seconds</li>
+                        <ul>
+                            <li>Scales down (scale(0)) and transitions to full transparency (opacity: 0)</li>
+                        </ul>
                     </ul>
-                <p class="bolded-header"><b>Tags</b></p>
+                <p class="bolded-header"><b>Hover Bar</b></p>
                     <ul>
-                        <li>Same 0.3-second animation is applied</li>
+                        <li>Hover animation eases within 0.3 seconds with a 0.1-second delay</li>
                         <ul>
                             <li>
-                                Tag text changes back to original font weight
+                                Background color reverts to original color
                             </li>
                         </ul>
                     </ul>
@@ -298,9 +307,22 @@
                     <li>After the animation, the class is removed, resetting the button</li>
                     <li>Page navigation is delayed by 0.3s, then the case study page opens in a new tab</li>
                 </ul>
+            <p class="bolded-header"><b>Logo Icon(s)</b></p>
+                <ul>
+                    <li>Click animation occurs smoothly within 0.4 seconds using ease</li>
+                    <ul>
+                        <li>Icon scales down to 0.85 and rotates by 8 degrees (transform: scale(0.85) rotate(8deg))</li>
+                        <li>Opacity is reduced to 0.5</li>
+                    </ul>
+                    <li>The function handleIconClick is triggered, and retrieves the data-link and data-type attributes from the clicked icon</li>
+                    <li>If the data-type is 'section' or 'external', the page opens in a new tab (via window.open(link, '_blank'))</li>
+                    <li>The click animation (scale and opacity change) remains for 600ms before returning to the icon's original state
+                    </li>
+                    <li>Simultaneously, page navigation is delayed by 600ms, then a new page opens in a new tab (either to a section of a case study page or an external link)</li>
+                    <li>The 'clicked-logo' class is removed after the animation ends, restoring the icon to its original state</li>
+                </ul>
             </div>
-
-
+            
             <div class="detail-box">
                 <h2>Feedback</h2>
                 <h3>Hover ON</h3>
@@ -310,7 +332,7 @@
                         <ul>
                             <li>Card increases in size</li>
                             <li>Card's drop-shadow grows on all sides</li>
-                            <li>Colored bar containing tags slides up from the bottom, fading in.</li>
+                            <li>Hover bar eases up (translateY(0)) within 0.5 seconds, going from 0 to 1 opacity in 0.3 seconds simultaneously</li>
                     </ul>
                 </ul>
                 <p class="bolded-header"><b>Card Image</b></p>
@@ -329,16 +351,20 @@
                         <li>Button moves up by 5 pixels</li>
                     </ul>
                 </ul>
-                <p class="bolded-header"><b>Logo Icon</b></p>
+                <p class="bolded-header"><b>Logo Icon(s)</b></p>
                     <ul>
                         <li>Icon scales and rotates 4 degrees smoothly within 0.3 seconds</li>
                         <li>Cursor changes to finger immediately</li>
-                    </ul>
-                <p class="bolded-header"><b>Tags</b></p>
-                    <ul>
-                        <li>Hover animation eases within 0.3 seconds</li>
+                        <li>Tooltip appears using smooth easing animation within 0.3 seconds</li>
                         <ul>
-                            <li>Tag text changes to bold</li>
+                            <li>Scales to full size (scale(1)) and transitions to full opacity (opacity: 1)</li>
+                        </ul>
+                    </ul>
+                <p class="bolded-header"><b>Hover Bar</b></p>
+                    <ul>
+                        <li>Hover animation eases within 0.3 seconds with a 0.1-second delay</li>
+                        <ul>
+                            <li>Background color changes to darker color</li>
                         </ul>
                     </ul>
                 
@@ -346,7 +372,7 @@
             <p class="bolded-header"><b>Overall Card</b></p>
                 <ul>
                     <li>Card and shadow return to original state with the same 0.3-second animation. </li>
-                    <li>The colored bar containing tags slides back down to the bottom, fading out</li>
+                    <li>Hover bar eases back down (translateY(20px)) within 0.5 seconds, going from 1 to 0 opacity in 0.3 seconds simultaneously</li>
                 </ul>
                 <p class="bolded-header"><b>"View Case Study" Button</b></p>
                     <ul>
@@ -357,17 +383,21 @@
                             <li>Button back down to original position</li>
                         </ul>
                     </ul>
-                <p class="bolded-header"><b>Logo Icon</b></p>
+                <p class="bolded-header"><b>Logo Icon(s)</b></p>
                     <ul>
                         <li>Icon reverses to original state smoothly within 0.3 seconds</li>
                         <li>Cursor changes back to pointer immediately</li>
+                        <li>Tooltip eases out smoothly within 0.3 seconds</li>
+                        <ul>
+                            <li>Scales down (scale(0)) and transitions to full transparency (opacity: 0)</li>
+                        </ul>
                     </ul>
-                <p class="bolded-header"><b>Tags</b></p>
+                <p class="bolded-header"><b>Hover Bar</b></p>
                     <ul>
-                        <li>Same 0.3-second animation is applied</li>
+                        <li>Hover animation eases within 0.3 seconds with a 0.1-second delay</li>
                         <ul>
                             <li>
-                                Tag text changes back to original font weight
+                                Background color reverts to original color
                             </li>
                         </ul>
                     </ul>
@@ -380,15 +410,25 @@
                     <li>Button opacity reduces to 0.9, fading smoothly within 0.15 seconds</li>
                     <li>Page navigation is delayed by 0.3s, then the case study page opens in a new tab</li>
                 </ul>
+            <p class="bolded-header"><b>Logo Icon(s)</b></p>
+                <ul>
+                    <li>Click animation occurs smoothly within 0.4 seconds using ease</li>
+                    <ul>
+                        <li>Icon scales down to 0.85 and rotates by 8 degrees (transform: scale(0.85) rotate(8deg))</li>
+                        <li>Opacity is reduced to 0.5</li>
+                    </ul>
+                    <li>The click animation (scale and opacity change) remains for 600ms before returning to the icon's original state
+                    </li>
+                    <li>Simultaneously, page navigation is delayed by 600ms, then a new page opens in a new tab (either to a section of a case study page or an external link)</li>
+                </ul>
             </div>
-
-
             
             <div class="detail-box">
                 <h2>Loops &amp; Modes</h2>
             <ul>
                 <li>No loops</li>
                 <li>Mode for "View Case Study" Button: New window opens when clicked</li>
+                <li>Mode for Logo Icon(s): New window opens when clicked</li>
             </ul>
             </div>
             
