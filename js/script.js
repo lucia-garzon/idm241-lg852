@@ -122,22 +122,19 @@ function handleIconClick(event) {
     const type = target.getAttribute('data-type');
     const logoImage = target.querySelector('.tool-logo');
 
-    // Add animation class
     if (logoImage) {
         logoImage.classList.add('clicked-logo');
     }
 
-    // Open the link in a new tab
     setTimeout(() => {
         if (type === 'section' || type === 'external') {
-            window.open(link, '_blank'); // Opens the link in a new tab
+            window.open(link, '_blank');
         }
 
-        // Remove animation class after delay
         if (logoImage) {
             logoImage.classList.remove('clicked-logo');
         }
-    }, 600); // Increased delay to match CSS duration
+    }, 600);
 }
 
 
