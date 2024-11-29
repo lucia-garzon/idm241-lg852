@@ -300,7 +300,7 @@
                     <li>The finger reverts back to a cursor</li>
                     <li>Button scales down to 90% of its original size within 0.3 seconds</li>
                     <li>Button opacity reduces to 0.9, fading smoothly within 0.15 seconds</li>
-                    <li>The event.preventDefault()method blocks the button's default hyperlink action
+                    <li>The event.preventDefault()method blocks the button's default hyperlink action (ensuring the click animation completes before the page transition occurs)
                     </li>
                     <li>The clicked class triggers the animation (scaling and fading) 
                     </li>
@@ -409,6 +409,7 @@
                     <li>Button scales down to 90% of its original size within 0.3 seconds</li>
                     <li>Button opacity reduces to 0.9, fading smoothly within 0.15 seconds</li>
                     <li>Page navigation is delayed by 0.3s, then the case study page opens in a new tab</li>
+                    <li>After the animation, the button resets to its original state</li>
                 </ul>
             <p class="bolded-header"><b>Logo Icon(s)</b></p>
                 <ul>
