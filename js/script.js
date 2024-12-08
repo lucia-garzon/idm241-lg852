@@ -12,7 +12,7 @@ function animateAndNavigate(event) {
     // Navigate after animation completes
     setTimeout(() => {
         window.open(button.getAttribute('data-url'), '_blank');
-    }, 300);  // Match this to your animation duration
+    }, 300);  // Matched to animation duration
 }
 
 
