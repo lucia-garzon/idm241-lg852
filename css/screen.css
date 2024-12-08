@@ -92,12 +92,32 @@ main {
     margin: 0 auto;
     padding: 0 20px;
 }
+.project-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 130ch;
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .cover {
+        margin-top: 10vh;
+        border-radius: 0px;
+    }
+}
 p {
     color: var(--primary-text);
     font-family: var(--font-primary);
     line-height: 28px;
     /* margin: 3vh auto; */
     margin-bottom: 0.75rem;
+}
+.project-title {
+    text-align: center;
+    margin-top: 3vh;
 }
 .bolded-header {
     color: var(--primary-text);
@@ -108,6 +128,11 @@ p {
 .bolded-header+ul {
     margin-top: -1vh;
 }
+.project-header {
+    text-align: center;
+    margin: 6vh auto 2vh auto;
+}
+
 ul li {
     color: var(--primary-text);
     font-family: var(--font-primary);
@@ -578,19 +603,22 @@ video {
     width: fit-content;
 }
 .button-card-final {
-    color: var(--secondary-text);
     font-family: var(--font-primary);
     font-size: 1rem;
     text-decoration: none;
     cursor: pointer; 
     transition: all .3s ease .1s;
     margin-top: 8px;
-    margin-bottom: .8rem;
     padding: 16px 20px; 
     border-radius: var(--border-radius);
     text-align: center; 
     width: fit-content;
     margin-bottom: 1.7rem;
+}
+.button-card-final.clicked {
+    transform: scale(0.9);
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.15s ease; 
 }
 .button-card1 {
     background-color: var(--project-1-dark);
@@ -1102,8 +1130,20 @@ video {
 /* hover bar! end */
 
 
-.button-card-final.clicked {
-    transform: scale(0.9);
-    opacity: 0.9;
-    transition: transform 0.3s ease, opacity 0.15s ease; 
+
+
+/* video styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the video */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for aesthetics */
 }
