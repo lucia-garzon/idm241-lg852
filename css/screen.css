@@ -603,6 +603,7 @@ video {
     width: fit-content;
 }
 .button-card-final {
+    color: var(--secondary-text);
     font-family: var(--font-primary);
     font-size: 1rem;
     text-decoration: none;
